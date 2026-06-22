@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SpaceCode Lab - Elite Technical Mentorship for Students.">
+    <title>SpaceCode Lab | Premium Mentorship</title>
+    
+    <!-- Bootstrap 5 Grid -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Premium Typography (Inter & Orbitron for Tech accents) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Scarcity Announcement Banner -->
+    <div class="scarcity-banner">
+        <div class="container">
+            <div class="banner-text-wrapper">
+                <span class="pulse-dot-red"></span>
+                <span>
+                    <strong class="text-white tracking-wide">SUMMER 2026 COHORT:</strong> 
+                    Only 2 seats remaining for the upcoming batch.
+                </span>
+                <a href="#enroll" class="banner-link">Secure Spot &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Top-Tier Ambient Background Graphics -->
+    <div class="ambient-graphics-container">
+        <!-- Massive Blurred Lighting Orbs -->
+        <div class="ambient-light light-blue"></div>
+        <div class="ambient-light light-purple"></div>
+        
+        <!-- Subtle Architect Grid -->
+        <div class="ambient-grid"></div>
+
+        <!-- Floating 3D Glass Shapes -->
+        <div class="glass-shape glass-sphere-1"></div>
+        <div class="glass-shape glass-torus"></div>
+        <div class="glass-shape glass-sphere-2"></div>
+    </div>
+    <!-- Parallax Ambient Mesh Background -->
+    <div class="mesh-bg">
+        <div class="mesh-blob blob-1" id="blob1"></div>
+        <div class="mesh-blob blob-2" id="blob2"></div>
+        <div class="mesh-blob blob-3" id="blob3"></div>
+    </div>
+
+    <!-- Floating Navigation -->
+    <!-- Floating Claymorphic Navigation -->
+    <div class="clay-nav-wrapper">
+        <nav class="clay-nav container d-flex justify-content-between align-items-center">
+            <a href="#" class="nav-brand">
+                <div class="brand-icon-clay">
+                    <i class="ph-fill ph-planet text-accent"></i>
+                </div>
+                SpaceCode.
+            </a>
+            <div class="d-none d-md-flex gap-4">
+                <a href="#vision" class="nav-link fw-semibold">The Vision</a>
+                <a href="#curriculum" class="nav-link fw-semibold">Curriculum</a>
+                <a href="#architect" class="nav-link fw-semibold">The Architect</a>
+            </div>
+            <!-- Smaller Elite CTA for Nav -->
+            <a href="#enroll" class="btn-elite-cta" style="transform: scale(0.85); transform-origin: right;">
+                <div class="btn-elite-content py-2 px-4">
+                    <span class="status-dot-pulse"></span>
+                    <span class="cta-text">Apply Now</span>
+                </div>
+            </a>
+        </nav>
+    </div>
+
+    <main class="page-wrapper">
+
+        <!-- Hero Section -->
+        <div class="container hero-container reveal">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-6 text-center text-lg-start position-relative z-index-2">
+                    <div class="badge-elite mb-4">Ages 10-18 • Standards 5th to 12th</div>
+                    <h1 class="hero-title">
+                        Architect the <br>
+                        <span class="text-accent">Next Generation.</span>
+                    </h1>
+                    <p class="hero-subtitle mt-4">
+                        An elite physical training lab for young minds. Master full-stack web architecture, core Python, and AI through high-performance, 1-on-1 mentorship.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3 mt-5 justify-content-center justify-content-lg-start">
+                        <!-- Unique Elite CTA Button -->
+<a href="#enroll" class="btn-elite-cta">
+    <div class="btn-elite-content">
+        <span class="status-dot-pulse"></span>
+        <span class="cta-text">Book Cognitive Assessment</span>
+        <i class="ph-bold ph-arrow-right cta-arrow"></i>
+    </div>
+</a>
+                    </div>
+                </div>
+                
+                <!-- Hero Image & Animated Terminal Showcase -->
+               <div class="col-lg-6 d-none d-lg-block position-relative z-index-2">
+    <div class="hero-image-wrapper">
+        <img src="https://t4.ftcdn.net/jpg/19/21/63/87/240_F_1921638748_w68y9ar9v2itHbKK89daKwjbcwiN2nau.jpg" alt="Clean Coding Workspace" class="hero-img">
+        
+        <!-- Floating IQ / Knowledge Badge -->
+        <div class="floating-badge shadow-float">
+            <i class="ph-fill ph-brain text-accent fs-4 mb-1"></i>
+            <span class="fw-bold d-block text-dark">Algorithmic IQ</span>
+            <span class="small text-muted">Cognitive Acceleration</span>
+        </div>
+        
+        <!-- Floating Animated Terminal -->
+        <div class="floating-terminal shadow-float">
+            <div class="terminal-header">
+                <span class="dot bg-danger"></span>
+                <span class="dot bg-warning"></span>
+                <span class="dot bg-success"></span>
+                <span class="terminal-title">spacecode.exe</span>
+            </div>
+            <div class="terminal-body">
+                <p class="typewriter-text"><span class="text-accent">const</span> student = <span class="text-accent">new</span> Architect();</p>
+                <p class="typewriter-text delay-1">student.initializeLogic();</p>
+                <p class="typewriter-text delay-2 text-success">> AI Protocols Online<span class="cursor-blink">_</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
+
+        <!-- Launch Telemetry Dashboard -->
+        <div class="container py-4 mt-2 reveal">
+            <div class="launch-dashboard-card shadow-float">
+                
+                <div class="launch-header">
+                    <div class="d-flex align-items-center gap-2">
+                        <div class="pulse-dot-green"></div>
+                        <span class="text-success fw-bold font-monospace small tracking-wide">SYSTEM NOMINAL // READY FOR LAUNCH</span>
+                    </div>
+                    <div class="font-monospace text-muted small d-none d-md-block">LOCATION: KALUPUR, AHD</div>
+                </div>
+
+                <div class="row g-0 align-items-center">
+                    <!-- Left: Telemetry Data -->
+                    <div class="col-lg-5 p-4 p-md-5 border-end border-dark-subtle">
+                        <span class="text-uppercase text-muted fw-bold small tracking-wide d-block mb-2">Operation</span>
+                        <h3 class="text-white fs-4 fw-bold mb-4">Summer 2026 Cohort</h3>
+                        
+                        <ul class="telemetry-list list-unstyled mb-0 font-monospace small">
+                            <li><span class="text-muted">Hardware Status:</span> <span class="text-info">OPTIMIZED</span></li>
+                            <li><span class="text-muted">Curriculum:</span> <span class="text-info">LOCKED</span></li>
+                            <li><span class="text-muted">Capacity:</span> <span class="text-danger pulse-text">02 SEATS REMAINING</span></li>
+                            <li><span class="text-muted">Clearance:</span> <span class="text-success">AWAITING CANDIDATES</span></li>
+                        </ul>
+                    </div>
+
+                    <!-- Right: T-Minus Countdown -->
+                    <div class="col-lg-7 p-4 p-md-5 text-center position-relative overflow-hidden">
+                        <!-- Scanning line effect -->
+                        <div class="scan-line"></div>
+                        
+                        <span class="text-uppercase text-muted fw-bold small tracking-wide d-block mb-3">T-Minus to Ignition</span>
+                        
+                        <div class="countdown-grid" id="launch-timer">
+                            <div class="time-block">
+                                <span class="time-value" id="days">12</span>
+                                <span class="time-label">DAYS</span>
+                            </div>
+                            <span class="time-separator">:</span>
+                            <div class="time-block">
+                                <span class="time-value" id="hours">08</span>
+                                <span class="time-label">HRS</span>
+                            </div>
+                            <span class="time-separator">:</span>
+                            <div class="time-block">
+                                <span class="time-value" id="minutes">45</span>
+                                <span class="time-label">MIN</span>
+                            </div>
+                            <span class="time-separator blink-colon">:</span>
+                            <div class="time-block">
+                                <span class="time-value text-accent" id="seconds">22</span>
+                                <span class="time-label">SEC</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+       <!-- Premium Tech Marquee (Infinite Ticker) -->
+        <div class="ticker-container mt-5 reveal">
+            <div class="ticker-wrapper">
+                <div class="ticker-track">
+                    <!-- Ticker Pills -->
+                    <div class="ticker-pill"><i class="ph-fill ph-file-html text-accent"></i> <span>HTML5 & CSS3</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-file-js text-accent"></i> <span>Modern JavaScript</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-file-py text-accent"></i> <span>Core Python</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-database text-accent"></i> <span>Data Architecture</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-brain text-accent"></i> <span>AI & Prompting</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-github-logo text-accent"></i> <span>Git Versioning</span></div>
+                    
+                    <!-- Duplicated for seamless loop -->
+                    <div class="ticker-pill"><i class="ph-fill ph-file-html text-accent"></i> <span>HTML5 & CSS3</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-file-js text-accent"></i> <span>Modern JavaScript</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-file-py text-accent"></i> <span>Core Python</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-database text-accent"></i> <span>Data Architecture</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-brain text-accent"></i> <span>AI & Prompting</span></div>
+                    <div class="ticker-pill"><i class="ph-fill ph-github-logo text-accent"></i> <span>Git Versioning</span></div>
+                </div>
+            </div>
+        </div>
+
+      <!-- Vision Section (Split-Pane Architectural Layout) -->
+        <div id="vision" class="container py-5 mt-4 reveal">
+            <div class="vision-wrapper position-relative overflow-hidden shadow-float">
+                
+                <div class="row g-0 align-items-stretch position-relative z-index-2">
+                    
+                    <!-- Left: Detailed Manifesto (With Grid Pattern) -->
+                    <div class="col-lg-6 p-4 p-md-5 position-relative bg-white">
+                        <!-- Subtle Engineering Grid Background -->
+                        <div class="vision-grid-bg"></div>
+                        
+                        <div class="position-relative z-index-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge-elite bg-white border-accent text-accent shadow-sm">
+                                    <i class="ph-bold ph-trend-up me-1"></i> The Paradigm Shift
+                                </span>
+                            </div>
+                            <h2 class="section-title mb-4">The New Literacy.</h2>
+                            
+                            <p class="fs-5 text-dark fw-bold mb-3" style="line-height: 1.6;">
+                                Artificial Intelligence is no longer just a tool; <span class="text-accent">it is the foundational language of the future.</span>
+                            </p>
+                            
+                            <p class="text-muted mb-4" style="line-height: 1.7;">
+                                We don't just teach children how to use software. We engineer their cognitive approach. By mastering full-stack logic, your child transitions from a passive consumer of technology into a visionary creator.
+                            </p>
+
+                            <!-- Value Pillars (Added a 3rd pillar to perfectly balance the height) -->
+                            <ul class="vision-check-list list-unstyled mt-5">
+                                <li>
+                                    <div class="check-icon shadow-sm"><i class="ph-bold ph-check"></i></div>
+                                    <div>
+                                        <strong class="text-dark">Algorithmic Problem Solving</strong>
+                                        <span class="d-block text-muted small mt-1">Training the brain to break down complex issues into logical sequences.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-icon shadow-sm"><i class="ph-bold ph-check"></i></div>
+                                    <div>
+                                        <strong class="text-dark">Production-Ready Engineering</strong>
+                                        <span class="d-block text-muted small mt-1">Moving beyond basic school IT to write actual, deployable application code.</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="check-icon shadow-sm"><i class="ph-bold ph-check"></i></div>
+                                    <div>
+                                        <strong class="text-dark">Future-Proof Career Foundation</strong>
+                                        <span class="d-block text-muted small mt-1">Skills that command and adapt to emerging AI, rather than becoming obsolete.</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                 
+                    <div class="col-lg-6 d-none d-lg-block position-relative border-start" style="min-height: 450px;">
+                        <!-- Tinted background to frame the graphic -->
+                        <div class="graphic-pane-bg"></div>
+                        
+                        <!-- Bulletproof Absolute Centered Wrapper -->
+                        <div class="neural-absolute-center">
+                            
+                            <!-- Central Glow -->
+                            <div class="glow-orb-center"></div>
+                            
+                            <!-- Rotating Orbit Rings -->
+                            <div class="orbit-ring ring-1"></div>
+                            <div class="orbit-ring ring-2"></div>
+                            
+                            <!-- Central Core -->
+                            <div class="neural-core shadow-float pulse-animation">
+                                <i class="ph-fill ph-brain"></i>
+                            </div>
+                            
+                            <!-- Floating Data Nodes -->
+                            <div class="data-node node-logic shadow-sm">
+                                <i class="ph-fill ph-git-branch text-accent"></i>
+                                <span class="fw-bold small text-dark">Logic</span>
+                            </div>
+                            
+                            <div class="data-node node-syntax shadow-sm">
+                                <i class="ph-fill ph-code text-accent"></i>
+                                <span class="fw-bold small text-dark">Syntax</span>
+                            </div>
+                            
+                            <div class="data-node node-ai shadow-sm">
+                                <i class="ph-fill ph-cpu text-accent"></i>
+                                <span class="fw-bold small text-dark">AI Models</span>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+       <!-- Curriculum Section (Pro Structured Modules) -->
+        <div id="curriculum" class="container py-5 mt-5">
+            <div class="text-center mb-5 reveal">
+                <h2 class="section-title mb-3">Pro-Level Curriculum.</h2>
+                <p class="text-muted fs-5 mx-auto" style="max-width: 600px;">
+                    A carefully engineered progression from fundamental logic to advanced artificial intelligence integration.
+                </p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Track 01 -->
+                <div class="col-lg-4 col-md-6 reveal d-delay-1">
+                    <div class="pro-module-card h-100">
+                        <div class="card-gradient-edge"></div>
+                        <div class="module-header d-flex justify-content-between align-items-center mb-4">
+                            <span class="module-phase">Phase 01</span>
+                            <div class="module-icon"><i class="ph-fill ph-layout"></i></div>
+                        </div>
+                        <h3 class="module-title">Web Architecture</h3>
+                        <p class="module-desc">
+                            Progress beyond basic templates. Students learn to construct responsive, logic-driven application interfaces from scratch, understanding how the web truly renders data.
+                        </p>
+                        <div class="module-divider"></div>
+                        <div class="module-tech-stack">
+                            <span class="tech-pill">HTML5</span>
+                            <span class="tech-pill">CSS3</span>
+                            <span class="tech-pill">JavaScript ES6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 02 -->
+                <div class="col-lg-4 col-md-6 reveal d-delay-2">
+                    <div class="pro-module-card h-100">
+                        <div class="card-gradient-edge"></div>
+                        <div class="module-header d-flex justify-content-between align-items-center mb-4">
+                            <span class="module-phase">Phase 02</span>
+                            <div class="module-icon"><i class="ph-fill ph-terminal-window"></i></div>
+                        </div>
+                        <h3 class="module-title">Core Python & Logic</h3>
+                        <p class="module-desc">
+                            The foundation of software engineering. We develop algorithmic thinking, teaching students data structures, object-oriented design, and secure backend processing.
+                        </p>
+                        <div class="module-divider"></div>
+                        <div class="module-tech-stack">
+                            <span class="tech-pill">Python 3</span>
+                            <span class="tech-pill">Algorithms</span>
+                            <span class="tech-pill">Data Structures</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Track 03 -->
+                <div class="col-lg-4 col-md-12 reveal d-delay-3">
+                    <div class="pro-module-card h-100">
+                        <div class="card-gradient-edge"></div>
+                        <div class="module-header d-flex justify-content-between align-items-center mb-4">
+                            <span class="module-phase">Phase 03</span>
+                            <div class="module-icon"><i class="ph-fill ph-cpu"></i></div>
+                        </div>
+                        <h3 class="module-title">AI Integration</h3>
+                        <p class="module-desc">
+                            Demystifying the black box. Students explore machine learning logic, advanced prompt engineering, and learn how to seamlessly plug modern AI APIs into their applications.
+                        </p>
+                        <div class="module-divider"></div>
+                        <div class="module-tech-stack">
+                            <span class="tech-pill">Prompt Eng.</span>
+                            <span class="tech-pill">API Integration</span>
+                            <span class="tech-pill">AI Logic</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Infrastructure Bento Grid (Bulletproof Architecture) -->
+        <div id="infrastructure" class="container py-5 mt-5 reveal">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="badge-elite mb-3 bg-white border-accent text-accent shadow-sm">
+                        <i class="ph-bold ph-buildings me-1"></i> Kalupur Tower, Ahmedabad
+                    </span>
+                    <h2 class="section-title">The SpaceCode Environment.</h2>
+                    <p class="text-muted fs-5 mt-3">
+                        Brilliance requires the right atmosphere. We engineered a physical workspace that mimics a top-tier tech company, enforcing deep cognitive focus.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bulletproof Bento Box Layout -->
+            <div class="row g-4 bento-grid-container">
+                
+                <!-- Bento Tile 1: The Hardware (Spans 8 columns) -->
+                <div class="col-lg-8 col-md-12 reveal d-delay-1">
+                    <div class="bento-card h-100 position-relative p-4 p-md-5">
+                        <div class="bento-bg-gradient-1"></div>
+                        
+                        <!-- Content tightly wrapped to prevent overlap -->
+                        <div class="position-relative z-index-2" style="max-width: 450px;">
+                            <div class="bento-icon mb-4"><i class="ph-fill ph-desktop"></i></div>
+                            <h3 class="fs-3 fw-bold text-dark mb-3">Pro-Grade Hardware</h3>
+                            <p class="text-muted fs-6 mb-0" style="line-height: 1.6;">
+                                No slow laptops. Every student operates on an ultra-wide dual-monitor setup with tactile mechanical keyboards, teaching them how real engineers manage complex codebases.
+                            </p>
+                        </div>
+                        
+                        <!-- Absolute Anchored Graphic (Will never break text) -->
+                        <div class="bento-hardware-graphic d-none d-md-flex">
+                            <div class="bento-screen-vertical shadow-sm"></div>
+                            <div class="bento-screen-horizontal shadow-float">
+                                <div class="screen-code-line w-75"></div>
+                                <div class="screen-code-line w-50"></div>
+                                <div class="screen-code-line w-100 text-accent">>_</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 2: Deep Work (Spans 4 columns) -->
+                <div class="col-lg-4 col-md-6 reveal d-delay-2">
+                    <div class="bento-card h-100 p-4 p-md-5 d-flex flex-column">
+                        <div class="bento-icon mb-4"><i class="ph-fill ph-speaker-slash"></i></div>
+                        <h3 class="fs-4 fw-bold text-dark mb-3">Deep Work Protocol</h3>
+                        <p class="text-muted small mb-0 flex-grow-1" style="line-height: 1.6;">
+                            The lab is a strictly phone-free, quiet zone. We train students to sustain 90-minute blocks of unbroken concentration—a rare skill today.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 3: The 8-Seat Limit (Spans 5 columns) -->
+                <div class="col-lg-5 col-md-6 reveal d-delay-3">
+                    <div class="bento-card h-100 p-4 p-md-5 d-flex flex-column justify-content-center align-items-center text-center bg-dark text-white border-0">
+                        <div class="bento-bg-pattern-dark"></div>
+                        <div class="position-relative z-index-2">
+                            <h2 class="display-3 fw-bold text-accent mb-0" style="line-height: 1;">8</h2>
+                            <h3 class="fs-5 fw-bold mb-3 mt-2">Strictly Limited Seats</h3>
+                            <p class="text-light opacity-75 small mb-0 mx-auto" style="max-width: 280px; line-height: 1.6;">
+                                Zero overcrowding. Ensuring your child receives absolute 1-on-1 code architecture reviews.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bento Tile 4: Peer Network (Spans 7 columns) -->
+                <div class="col-lg-7 col-md-12 reveal d-delay-4">
+                    <div class="bento-card h-100 p-4 p-md-5">
+                        <div class="row h-100 align-items-center g-4">
+                            <div class="col-sm-auto d-none d-sm-block">
+                                <div class="bento-icon-large"><i class="ph-fill ph-users-three"></i></div>
+                            </div>
+                            <div class="col">
+                                <h3 class="fs-4 fw-bold text-dark mb-2">An Elite Peer Group</h3>
+                                <p class="text-muted small mb-0" style="line-height: 1.6;">
+                                    Your child will be surrounded by 7 other highly motivated, ambitious students. In a room where everyone is building the future, excellence becomes the baseline standard.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- The Architect Section -->
+       <!-- The Architect Section (Ultra-Premium Redesign) -->
+        <div id="architect" class="container py-5 mt-5">
+            <div class="architect-wrapper reveal shadow-float">
+                <div class="row g-0 h-100">
+                    
+                    <!-- Left: Executive Profile Card -->
+                    <div class="col-lg-5 p-5 d-flex flex-column justify-content-center align-items-center position-relative architect-profile-side">
+                        <!-- Advanced Ambient Glow -->
+                        <div class="architect-glow-bg"></div>
+                        
+                        <div class="profile-ring mb-4 position-relative z-index-2">
+                            <img src="https://media.istockphoto.com/id/1302140271/vector/square-academic-cap-simple-graduate-cap-silhouette-icon.jpg?s=612x612&w=0&k=20&c=v9DUoWgY1p8lbRPobWcWzG1BPl1Bcgk5IonsJgpWcB4=" alt="Faiz Mansuri" class="profile-img-advanced">
+                            <!-- Live Status Indicator -->
+                            <div class="status-indicator shadow-sm">
+                                <span class="pulse-dot"></span>
+                            </div>
+                        </div>
+                        
+                        <h3 class="fw-bold text-dark mb-1 position-relative z-index-2">Faiz Mansuri</h3>
+                        <p class="text-accent fw-bold small mb-4 text-uppercase tracking-wide position-relative z-index-2">Lead Full-Stack Engineer</p>
+                        
+                        <div class="badge-verified position-relative z-index-2">
+                            <i class="ph-fill ph-seal-check fs-5"></i>
+                            <span>ISRO (Ex-Contract)</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Info & Bento Feature Grid -->
+                    <div class="col-lg-7 p-5 bg-white architect-info-side">
+                        <h3 class="fs-2 fw-bold text-dark mb-3">Space-Grade Logic.<br><span class="text-accent">Elite Mentorship.</span></h3>
+                        <p class="text-muted fs-5 mb-5" style="line-height: 1.7;">
+                            When you entrust your child's technical foundation to SpaceCode, they are mentored by an active Full-Stack Engineer with past contract experience at the <strong>Indian Space Research Organisation (ISRO)</strong>.
+                        </p>
+                        
+                        <!-- Premium Bento Micro-Grid -->
+                        <div class="row g-4 mt-2">
+                            <div class="col-md-6 reveal d-delay-1">
+                                <div class="premium-feature-box h-100">
+                                    <div class="feature-icon-wrapper mb-3">
+                                        <i class="ph-fill ph-cpu"></i>
+                                    </div>
+                                    <h4 class="fs-6 fw-bold text-dark mb-2">Exclusive Workstations</h4>
+                                    <p class="text-muted small mb-0">Strictly limited to 8 high-performance setups for absolute cognitive focus.</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6 reveal d-delay-2">
+                                <div class="premium-feature-box h-100">
+                                    <div class="feature-icon-wrapper mb-3">
+                                        <i class="ph-fill ph-github-logo"></i>
+                                    </div>
+                                    <h4 class="fs-6 fw-bold text-dark mb-2">Real Deployments</h4>
+                                    <p class="text-muted small mb-0">Direct 1-on-1 mentorship building real-world GitHub software portfolios.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Tangible Outcomes Roadmap (Advanced Pipeline Design) -->
+        <div id="outcomes" class="container py-5 mt-5 reveal">
+            <div class="row justify-content-center mb-5 text-center">
+                <div class="col-lg-8">
+                    <span class="badge-elite mb-3">The Transformation</span>
+                    <h2 class="section-title">What Will They Actually Build?</h2>
+                    <p class="text-muted fs-5 mt-3 mx-auto" style="max-width: 700px;">
+                        We don't do theoretical exams. We measure success by the complexity of the software your child can deploy to the live internet.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="roadmap-pipeline position-relative">
+                        <!-- Animated Data Flow Line -->
+                        <div class="pipeline-track">
+                            <div class="pipeline-flow"></div>
+                        </div>
+
+                        <!-- Milestone 1 -->
+                        <div class="pipeline-node reveal d-delay-1">
+                            <div class="node-indicator pulse-animation">
+                                <i class="ph-bold ph-globe"></i>
+                            </div>
+                            <div class="node-card shadow-sm">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                                    <span class="text-accent fw-bold small text-uppercase tracking-wide">Weeks 1 - 4</span>
+                                    <span class="deliverable-badge"><i class="ph-fill ph-rocket-launch me-1"></i> Live Portfolio</span>
+                                </div>
+                                <h3 class="fs-4 fw-bold text-dark mb-3">The First Web Application</h3>
+                                <p class="text-muted mb-4">
+                                    Moving past block-coding, students write their first raw HTML/CSS/JS architecture. They learn how browsers compile data and successfully deploy a personal, responsive website to a real public domain.
+                                </p>
+                                <div class="node-tech">
+                                    <span>HTML5</span>
+                                    <span>CSS3</span>
+                                    <span>Vercel Deployment</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 2 -->
+                        <div class="pipeline-node reveal d-delay-2">
+                            <div class="node-indicator">
+                                <i class="ph-bold ph-terminal"></i>
+                            </div>
+                            <div class="node-card shadow-sm">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                                    <span class="text-accent fw-bold small text-uppercase tracking-wide">Weeks 5 - 12</span>
+                                    <span class="deliverable-badge"><i class="ph-fill ph-gear me-1"></i> Automation Engine</span>
+                                </div>
+                                <h3 class="fs-4 fw-bold text-dark mb-3">Python Automation & Logic</h3>
+                                <p class="text-muted mb-4">
+                                    Introducing complex algorithmic problem-solving. Your child will construct backend Python scripts capable of parsing data files, automating repetitive math tasks, and running terminal-based logic games.
+                                </p>
+                                <div class="node-tech">
+                                    <span>Python 3</span>
+                                    <span>Data Structures</span>
+                                    <span>Terminal CLI</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone 3 -->
+                        <div class="pipeline-node reveal d-delay-3">
+                            <div class="node-indicator">
+                                <i class="ph-bold ph-brain"></i>
+                            </div>
+                            <div class="node-card shadow-sm">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center mb-3 gap-2">
+                                    <span class="text-accent fw-bold small text-uppercase tracking-wide">Weeks 13 - 24</span>
+                                    <span class="deliverable-badge"><i class="ph-fill ph-robot me-1"></i> Functional AI Tool</span>
+                                </div>
+                                <h3 class="fs-4 fw-bold text-dark mb-3">The AI Integration</h3>
+                                <p class="text-muted mb-4">
+                                    The ultimate engineering milestone. They will learn to parse JSON, authenticate securely, and interact with live AI models to build and deploy their own intelligent chatbot or data-processing tool to GitHub.
+                                </p>
+                                <div class="node-tech">
+                                    <span>API Integration</span>
+                                    <span>Prompt Eng.</span>
+                                    <span>GitHub</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div id="faq" class="container py-5 mt-5 mb-4 reveal">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mb-5">
+                    <h2 class="section-title">Common Inquiries.</h2>
+                    <p class="text-muted fs-5">Everything you need to know about the SpaceCode mentorship program.</p>
+                </div>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="faq-container shadow-float">
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="fw-bold text-dark fs-5">My child has zero coding experience. Is this too advanced?</span>
+                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
+                                    Not at all. Phase 01 is specifically engineered for absolute beginners. We do not expect them to know syntax; we only require curiosity. We start by building core logical reasoning before writing a single line of complex code.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="fw-bold text-dark fs-5">Do I need to purchase a high-end laptop for my child?</span>
+                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
+                                    No. The SpaceCode Lab is fully equipped with 8 dedicated, high-performance workstations optimized for development and local AI model testing. Your child only needs to bring themselves.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span class="fw-bold text-dark fs-5">How is this different from computer science at school?</span>
+                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
+                                    School curriculums are often years behind current industry standards, relying on memorization and obsolete frameworks. SpaceCode is directed by an active Full-Stack Engineer. We teach modern, production-ready tools (like Git, Node, and AI APIs) that actual tech companies use today.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item border-0">
+                            <button class="faq-question">
+                                <span class="fw-bold text-dark fs-5">Why restrict the lab to only 8 students?</span>
+                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
+                                    Engineering cannot be taught in a crowded classroom. A strict 8-student limit allows for direct, 1-on-1 code reviews, personalized architecture planning, and a premium, distraction-free environment crucial for deep cognitive focus.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Booking Form Section -->
+        <div id="enroll" class="container py-5 mt-5 mb-5 reveal">
+            <div class="form-wrapper mx-auto shadow-float">
+                <div class="text-center mb-5">
+                    <div class="form-icon mx-auto mb-3 pulse-animation"><i class="ph ph-calendar-plus"></i></div>
+                    <h2 class="fw-bold text-dark fs-1">Secure Their Future.</h2>
+                    <p class="text-muted fs-5">Book a complimentary 1-on-1 strategy session.</p>
+                </div>
+                
+                <form action="https://formsubmit.co/faizsacisro@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="SpaceCode Strategy Session Request">
+                    <input type="hidden" name="_captcha" value="false">
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Parent's Name</label>
+                            <input type="text" name="Parent Name" class="form-control pro-input" placeholder="Full Name" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Email Address</label>
+                            <input type="email" name="Email" class="form-control pro-input" placeholder="Email Address" required>
+                        </div>
+                    </div>
+                    
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <label class="form-label">Phone Number</label>
+                            <input type="tel" name="Phone" class="form-control pro-input" placeholder="+91 00000 00000" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label">Student's Standard</label>
+                            <select name="Student Standard" class="form-select pro-input" required>
+                                <option value="" disabled selected>Select Class Level</option>
+                                <option value="5th - 7th Standard">5th - 7th Standard</option>
+                                <option value="8th - 10th Standard">8th - 10th Standard</option>
+                                <option value="11th - 12th Standard">11th - 12th Standard</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="mb-5">
+                        <label class="form-label">Preferred Time</label>
+                        <input type="datetime-local" name="Preferred Time" class="form-control pro-input" required>
+                    </div>
+
+                    <button type="submit" class="btn-primary w-100 py-3 fs-5 glow-btn">Schedule Session</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+
+   <!-- Top-Tier Claymorphic Footer -->
+    <footer class="py-5 mt-5 position-relative z-index-2">
+        <div class="container">
+            <div class="clay-footer-card">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start">
+                        <a href="#" class="nav-brand justify-content-center justify-content-lg-start mb-3">
+                            <div class="brand-icon-clay me-2">
+                                <i class="ph-fill ph-planet text-accent"></i>
+                            </div>
+                            SpaceCode Lab.
+                        </a>
+                        <p class="text-muted small mb-0">
+                            The ultimate engineering foundation for the next generation. Designed exclusively in Ahmedabad.
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-4 text-center">
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="#vision" class="footer-link">Vision</a>
+                            <a href="#curriculum" class="footer-link">Curriculum</a>
+                            <a href="#faq" class="footer-link">FAQ</a>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-center justify-content-lg-end gap-3">
+                            <a href="#" class="clay-social-btn"><i class="ph-fill ph-instagram-logo"></i></a>
+                            <a href="#" class="clay-social-btn"><i class="ph-fill ph-linkedin-logo"></i></a>
+                            <a href="#" class="clay-social-btn"><i class="ph-fill ph-twitter-logo"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <hr class="clay-divider my-4">
+                
+                <div class="text-center">
+                    <p class="mb-0 text-muted small fw-medium">&copy; 2026 SpaceCode Lab. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+<!-- 1. Cinematic Film Grain Overlay -->
+    <div class="cinematic-noise"></div>
+
+    <!-- 3. Floating Scarcity Widget -->
+    <script src="script.js"></script>
+</body>
+</html>
