@@ -1,3 +1,5 @@
+
+
 /* Ultra-Premium Clean Palette & World-Class Variables */
 :root {
     --bg-base: #f8fafc; 
@@ -1590,78 +1592,271 @@ html, body {
     100% { opacity: 0.6; text-shadow: 0 0 0 transparent; }
 }
 
-/* Countdown Grid */
-.countdown-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    font-family: 'Courier New', Courier, monospace; /* Hard tech feel */
+/* =========================================
+   CINEMATIC CYBER-TERMINAL
+   ========================================= */
+
+.terminal-glow-wrapper {
+    margin: 0 auto;
+    perspective: 1000px;
 }
 
-.time-block {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #1e293b;
-    padding: 15px 20px;
-    border-radius: 12px;
-    border: 1px solid #334155;
-    min-width: 90px;
-}
-
-.time-value {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #f8fafc;
-    line-height: 1;
-    margin-bottom: 5px;
-}
-
-.time-label {
-    font-size: 0.75rem;
-    color: #94a3b8;
-    letter-spacing: 2px;
-}
-
-.time-separator {
-    font-size: 2.5rem;
-    color: #475569;
-    font-weight: 700;
-    margin-top: -20px;
-}
-
-.blink-colon {
-    animation: blinker 1s linear infinite;
-}
-
-@keyframes blinker {
-    50% { opacity: 0; }
-}
-
-/* Subtle scanning line over the timer */
-.scan-line {
+/* Massive Holographic Glow Behind Terminal */
+.ambient-terminal-glow {
     position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 2px;
-    background: rgba(96, 165, 250, 0.2);
-    box-shadow: 0 0 10px rgba(96, 165, 250, 0.5);
-    animation: scan 4s linear infinite;
-    pointer-events: none;
+    top: -10%; left: -5%;
+    width: 110%; height: 120%;
+    background: radial-gradient(circle at 50% 50%, rgba(37,99,235,0.15) 0%, rgba(139,92,246,0.1) 40%, transparent 70%);
+    filter: blur(40px);
+    z-index: 1;
+    animation: breatheGlow 8s ease-in-out infinite alternate;
 }
 
-@keyframes scan {
-    0% { top: -10%; opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { top: 110%; opacity: 0; }
+@keyframes breatheGlow {
+    0% { transform: scale(0.95); opacity: 0.8; }
+    100% { transform: scale(1.05); opacity: 1; }
+}
+
+/* The Terminal Container (With Animated Gradient Border) */
+.cyber-terminal {
+    position: relative;
+    border-radius: 20px;
+    padding: 1px; /* Border thickness */
+    background: linear-gradient(135deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02));
+    box-shadow: 
+        0 30px 60px -15px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(37, 99, 235, 0.1);
+    transform: rotateX(2deg); /* Very slight 3D tilt */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.cyber-terminal.success-glow {
+    box-shadow: 
+        0 30px 60px -15px rgba(0, 0, 0, 0.4),
+        0 0 60px rgba(16, 185, 129, 0.2); /* Green glow on success */
+}
+
+/* The Glass Interior */
+.terminal-inner {
+    background: rgba(15, 23, 42, 0.95); /* Deep slate with slight transparency */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 19px;
+    overflow: hidden;
+}
+
+/* Header Styling */
+.terminal-header {
+    background: rgba(30, 41, 59, 0.8);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.terminal-tab {
+    background: rgba(255,255,255,0.05);
+    padding: 6px 16px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: #cbd5e1;
+    font-family: monospace;
+    border: 1px solid rgba(255,255,255,0.05);
+}
+#boot-sequence {
+    color: #ffffff !important;
+    opacity: 0.85; /* Keeps it slightly distinct from the main colorful code */
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); /* Adds a subtle screen glow */
+}
+
+.mac-btn { width: 12px; height: 12px; border-radius: 50%; }
+.close-btn { background: #ef4444; box-shadow: 0 0 10px rgba(239,68,68,0.5); }
+.min-btn { background: #f59e0b; }
+.max-btn { background: #10b981; }
+
+.terminal-body {
+    color: #f8fafc;
+    min-height: 320px;
+}
+
+/* Syntax Highlighting */
+.code-comment { color: #64748b; font-style: italic; }
+.code-keyword { color: #c678dd; font-weight: bold; } 
+.code-function { color: #61afef; } 
+.code-string { color: #98c379; } 
+.code-variable { color: #e5c07b; } 
+
+.typing-cursor {
+    display: inline-block;
+    width: 10px; height: 1.2rem;
+    background-color: var(--accent-blue);
+    vertical-align: middle;
+    animation: blinkCursor 1s step-end infinite;
+    box-shadow: 0 0 8px var(--accent-blue);
+}
+
+/* The Emotional Heartbeat Box */
+.terminal-heartbeat {
+    background: rgba(37, 99, 235, 0.08);
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+.heartbeat-bg-sweep {
+    position: absolute;
+    top: 0; left: -100%; width: 50%; height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(37,99,235,0.1), transparent);
+    animation: sweepLight 3s infinite;
+}
+
+.user-avatar-small {
+    width: 40px; height: 40px;
+    background: rgba(37,99,235,0.15);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    border: 1px solid rgba(37,99,235,0.3);
+    font-size: 1.2rem;
+}
+
+@keyframes sweepLight { 100% { left: 200%; } }
+@keyframes blinkCursor { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+@keyframes pulseHeart { 0%, 100% { transform: scale(1); filter: drop-shadow(0 0 0 transparent); } 20% { transform: scale(1.3); filter: drop-shadow(0 0 10px rgba(239,68,68,0.6)); } 40% { transform: scale(1); } 60% { transform: scale(1.3); filter: drop-shadow(0 0 10px rgba(239,68,68,0.6)); } }
+
+@media (max-width: 768px) {
+    .terminal-body { font-size: 0.9rem !important; padding: 1.5rem !important; min-height: 280px; }
+    .terminal-tab { display: none; }
+}
+
+/* =========================================
+   THE ARCHITECT'S PROMISE
+   ========================================= */
+
+.promise-letter-wrapper {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.promise-letter-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -10px rgba(37,99,235,0.1) !important;
+}
+
+/* Elegant Editorial Typography */
+.serif-heading {
+    font-family: 'Playfair Display', 'Merriweather', Georgia, serif;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.serif-letter p {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 1.15rem;
+    line-height: 1.85;
+    margin-bottom: 1.5rem;
+    color: #334155;
+}
+
+/* Authentic Signature Look */
+.signature-text {
+    font-family: 'Brush Script MT', 'Lucida Handwriting', 'Caveat', cursive;
+    font-size: 2.8rem;
+    color: var(--accent-blue);
+    line-height: 1;
+    transform: rotate(-3deg); /* Slight tilt for handwriting realism */
+    margin-left: 10px;
 }
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-    .countdown-grid { gap: 5px; }
-    .time-block { min-width: 60px; padding: 10px; }
-    .time-value { font-size: 1.5rem; }
-    .time-separator { font-size: 1.5rem; margin-top: -15px; }
-    .launch-dashboard-card .border-end { border-right: none !important; border-bottom: 1px solid #334155; }
+    .serif-heading {
+        font-size: 1.75rem !important;
+        margin-bottom: 2rem !important;
+    }
+    .serif-letter p {
+        font-size: 1.05rem;
+        line-height: 1.7;
+    }
+   /* Authentic Executive Signature Look */
+/* Authentic Executive Signature Look */
+.signature-text {
+    font-family: 'Great Vibes', cursive !important; /* Added !important to force the override */
+    font-size: 3.5rem; 
+    color: #1e3a8a; 
+    line-height: 0.8;
+    transform: rotate(-4deg); 
+    margin-left: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px !important;
+    text-shadow: 0px 0px 1px rgba(30, 58, 138, 0.4);
+    opacity: 0.9;
+    padding-right: 10px; 
+    padding-bottom: 10px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .signature-text {
+        font-size: 2.8rem;
+    }
+}
+}
+/* =========================================
+   3D ENGINEERING PORTFOLIO CARDS
+   ========================================= */
+
+.perspective-container {
+    perspective: 1200px; /* Gives the 3D depth */
+}
+
+.tilt-card-wrapper {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    z-index: 1; /* Ensures the wrapper sits above the background */
+}
+
+.glass-project-card {
+    background: linear-gradient(145deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    transform-style: preserve-3d; /* Crucial for smooth rendering */
+}
+
+/* The light glare that moves across the card */
+.card-glare {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.1), transparent 50%);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1;
+    transition: opacity 0.3s ease;
+}
+
+.tilt-card-wrapper:hover .card-glare {
+    opacity: 1;
+}
+
+.project-icon {
+    width: 60px; height: 60px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2rem;
+    z-index: 2; position: relative;
+}
+
+.text-purple { color: #c084fc; }
+.project-status { font-family: monospace; font-weight: bold; font-size: 0.85rem; z-index: 2; position: relative; }
+
+/* Tiny Tech Stack Pills */
+.tech-badge {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    color: #cbd5e1;
+    font-family: monospace;
+    z-index: 2; position: relative;
 }

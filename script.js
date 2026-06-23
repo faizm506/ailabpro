@@ -78,30 +78,137 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     
-    // --- 6. LAUNCH TELEMETRY COUNTDOWN ---
-    // Set your target launch date here (Format: Year, Month Index (0-11), Day, Hour, Min, Sec)
-    // Note: July is month index 6.
-    const launchDate = new Date(2026, 6, 10, 9, 0, 0).getTime();
+// --- 6. CINEMATIC TERMINAL TYPING ANIMATION ---
+    const terminalContainer = document.getElementById('typewriter-container');
+    const bootContainer = document.getElementById('boot-sequence');
+    const revealBox = document.getElementById('terminal-reveal');
+    const terminalWrapper = document.querySelector('.cyber-terminal');
+    const cursor = document.querySelector('.typing-cursor');
 
-    const timerInterval = setInterval(function() {
-        const now = new Date().getTime();
-        const distance = launchDate - now;
+    // Fast boot sequence lines
+    const bootLines = [
+        "> Establishing secure connection to SpaceCode Server...",
+        "> Initializing Cognitive Architecture Engine v2.0...",
+        "> Loading student parameters... OK",
+        "> Workspace environment ready. Executing protocol.<br><br>"
+    ];
 
-        // Time calculations
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    // The Emotional Code
+    const codeLines = [
+        "<span class='code-comment'># Phase 1: Establish Logical Foundation</span>",
+        "<span class='code-keyword'>import</span> <span class='code-variable'>potential</span> <span class='code-keyword'>from</span> <span class='code-function'>student</span>",
+        "<span class='code-keyword'>import</span> <span class='code-variable'>architecture</span> <span class='code-keyword'>from</span> <span class='code-function'>spacecode</span>",
+        "<br>",
+        "<span class='code-comment'># Phase 3: AI Integration & Global Deployment</span>",
+        "<span class='code-variable'>student</span>.<span class='code-function'>train_logic</span>(focus=<span class='code-keyword'>True</span>, resilience=<span class='code-keyword'>True</span>)",
+        "<span class='code-variable'>student</span>.<span class='code-function'>build_application</span>(type=<span class='code-string'>'Artificial Intelligence'</span>)",
+        "<span class='code-variable'>student</span>.<span class='code-function'>deploy_to_world</span>()",
+        "<br>"
+    ];
 
-        // Display results with leading zeros if needed
-        document.getElementById("days").innerText = days.toString().padStart(2, '0');
-        document.getElementById("hours").innerText = hours.toString().padStart(2, '0');
-        document.getElementById("minutes").innerText = minutes.toString().padStart(2, '0');
-        document.getElementById("seconds").innerText = seconds.toString().padStart(2, '0');
+    let isTypingStarted = false;
 
-        // If the countdown is finished
-        if (distance < 0) {
-            clearInterval(timerInterval);
-            document.getElementById("launch-timer").innerHTML = "<div class='text-accent fw-bold fs-3 mt-3'>IGNITION ACTIVE</div>";
+    // 1. Run the fast boot sequence
+    function runBootSequence(callback) {
+        let i = 0;
+        function flashLine() {
+            if (i < bootLines.length) {
+                bootContainer.innerHTML += bootLines[i] + "<br>";
+                i++;
+                setTimeout(flashLine, 150); // Fast, hacker-like speed
+            } else {
+                setTimeout(callback, 500); // Pause before real typing
+            }
         }
-    }, 1000);
+        flashLine();
+    }
+
+    // 2. Type out the Python Code
+    function typeCode() {
+        let currentLine = 0;
+        
+        function typeNextLine() {
+            if (currentLine < codeLines.length) {
+                let lineHTML = codeLines[currentLine];
+                terminalContainer.innerHTML += lineHTML + (lineHTML === "<br>" ? "" : "<br>");
+                currentLine++;
+                
+                // Random typing speed (300ms to 700ms)
+                let typingSpeed = Math.floor(Math.random() * 400) + 300;
+                setTimeout(typeNextLine, typingSpeed);
+            } else {
+                // 3. Trigger the grand finale
+                cursor.style.display = 'none';
+                terminalWrapper.classList.add('success-glow'); // Shifts terminal border to green
+                
+                setTimeout(() => {
+                    revealBox.classList.remove('d-none');
+                    revealBox.classList.add('reveal', 'active'); // Fade up
+                }, 400);
+            }
+        }
+        typeNextLine();
+    }
+
+    // Intersection Observer triggers on scroll
+    const terminalObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Trigger when 40% of the terminal is visible
+            if (entry.isIntersecting && !isTypingStarted) {
+                isTypingStarted = true;
+                setTimeout(() => {
+                    runBootSequence(typeCode);
+                }, 500);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    if (terminalContainer) {
+        terminalObserver.observe(document.getElementById('breakthrough'));
+    }
+
+    // --- 7. APPLE-STYLE 3D TILT CARDS ---
+    // We only run this on desktop. Mobile users just get nice static cards.
+   // --- 7. APPLE-STYLE 3D TILT CARDS (Glitch-Free) ---
+    if (window.innerWidth >= 992) {
+        // 1. We select the STATIC wrapper, not the moving card
+        const wrappers = document.querySelectorAll('.tilt-card-wrapper');
+
+        wrappers.forEach(wrapper => {
+            const card = wrapper.querySelector('.tilt-card');
+            const glare = card.querySelector('.card-glare');
+
+            wrapper.addEventListener('mousemove', (e) => {
+                // 2. Calculate mouse position relative to the static wrapper
+                const rect = wrapper.getBoundingClientRect();
+                const x = e.clientX - rect.left; 
+                const y = e.clientY - rect.top;  
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                // 3. Smooth rotation math (max 10 degrees to keep it elegant)
+                const rotateX = ((y - centerY) / centerY) * -10;
+                const rotateY = ((x - centerX) / centerX) * 10;
+
+                // 4. Apply transformation to the inner card
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                // 5. Move the glare
+                glare.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(255,255,255,0.15), transparent 50%)`;
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                // 6. Smoothly snap back to flat when mouse leaves the wrapper
+                card.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.8, 0.25, 1)';
+                card.style.transform = `perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)`;
+                glare.style.opacity = '0';
+            });
+
+            wrapper.addEventListener('mouseenter', () => {
+                // 7. Remove CSS transition while hovering so it tracks the mouse instantly
+                card.style.transition = 'none';
+                glare.style.opacity = '1';
+            });
+        });
+    }
