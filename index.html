@@ -415,6 +415,95 @@
 
             </div>
         </div>
+
+        <!-- The Cognitive Radar (Visualizing Intelligence) -->
+        <div id="cognitive-radar" class="container py-5 mt-5 mb-5 reveal">
+            <div class="row align-items-center g-5">
+                
+                <!-- Left Side: The Controls & Psychology -->
+               <!-- Left Side: The Controls & Psychology -->
+                <div class="col-lg-5">
+                    <span class="d-inline-block px-3 py-2 rounded-pill mb-3" style="background: rgba(37,99,235,0.1); border: 1px solid rgba(37,99,235,0.3); color: var(--accent-blue); font-weight: 600; font-size: 0.85rem; letter-spacing: 1px; text-transform: uppercase;">
+                        <i class="ph-fill ph-brain me-1 pulse-animation"></i> Cognitive Architecture
+                    </span>
+                    
+                    <!-- Upgraded Gradient Heading -->
+                    <h2 class="display-4 fw-bolder mb-4 tech-gradient-text" style="letter-spacing: -1px;">Rewiring the mind.</h2>
+                    
+                    <!-- Upgraded Crisp Paragraph -->
+                    <p class="fs-5 mb-5" style="color: #334155; line-height: 1.7;">
+                        We don't just teach Python. We actively <strong style="color: #0f172a;">expand the surface area</strong> of your child's cognitive abilities. Use the slider to see the projected 6-month growth trajectory.
+                    </p>
+
+                    <!-- Interactive Slider -->
+                    <div class="mt-5">
+                        <div class="d-flex justify-content-between small fw-bold mb-3 font-monospace" style="color: #94a3b8;">
+                            <span id="label-m1" style="transition: color 0.3s ease;">MONTH 01</span>
+                            <span id="label-m2" class="text-accent" style="transition: color 0.3s ease;">MONTH 03</span>
+                            <span id="label-m3" style="transition: color 0.3s ease;">MONTH 06</span>
+                        </div>
+                        <input type="range" class="form-range cyber-slider" min="1" max="3" step="1" value="2" id="timelineSlider">
+                    </div>
+
+                    <!-- Upgraded Dynamic Feedback Box -->
+                    <div class="radar-feedback-box mt-4 p-4 rounded-4 position-relative overflow-hidden" style="background: #0f172a; border: 1px solid rgba(37,99,235,0.4); box-shadow: 0 10px 30px rgba(37,99,235,0.15);">
+                        <!-- Subtle background glow inside the box -->
+                        <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle at 50% 0%, rgba(37,99,235,0.15), transparent 60%); pointer-events: none;"></div>
+                        
+                        <h4 id="radar-title" class="text-white fs-5 fw-bold mb-2 position-relative z-index-2">The Algorithmic Awakening</h4>
+                        <p id="radar-desc" class="position-relative z-index-2 mb-0" style="color: #e2e8f0; font-size: 0.95rem; line-height: 1.6;">
+                            By month 3, they transition from struggling with basic syntax to thinking in systems. Deep focus duration hits 60+ minutes.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Side: The SVG Hologram -->
+                <div class="col-lg-7">
+                    <div class="radar-container p-4 p-md-5 rounded-4 position-relative d-flex justify-content-center align-items-center bg-dark shadow-float overflow-hidden">
+                        
+                        <!-- Ambient background for the radar -->
+                        <div class="radar-bg-glow"></div>
+
+                        <!-- The SVG Radar Chart -->
+                        <div class="position-relative" style="width: 100%; max-width: 400px; aspect-ratio: 1/1;">
+                            
+                            <!-- SVG Web -->
+                            <svg viewBox="0 0 300 300" class="w-100 h-100 position-absolute top-0 left-0" style="z-index: 2;">
+                                <!-- Grid Webs (100%, 80%, 60%, 40%, 20%) -->
+                                <g class="radar-grid" stroke="rgba(255,255,255,0.1)" stroke-width="1" fill="none">
+                                    <polygon points="150,50 236.6,100 236.6,200 150,250 63.4,200 63.4,100" />
+                                    <polygon points="150,70 219.3,110 219.3,190 150,230 80.7,190 80.7,110" />
+                                    <polygon points="150,90 202,120 202,180 150,210 98,180 98,120" />
+                                    <polygon points="150,110 184.6,130 184.6,170 150,190 115.4,170 115.4,130" />
+                                    <polygon points="150,130 167.3,140 167.3,160 150,170 132.7,160 132.7,140" />
+                                    <!-- Crosshairs -->
+                                    <line x1="150" y1="50" x2="150" y2="250" />
+                                    <line x1="63.4" y1="100" x2="236.6" y2="200" />
+                                    <line x1="63.4" y1="200" x2="236.6" y2="100" />
+                                </g>
+
+                                <!-- The Animated Stat Polygon -->
+                                <polygon id="stat-polygon" points="150,150 150,150 150,150 150,150 150,150 150,150" 
+                                    fill="rgba(96, 165, 250, 0.4)" 
+                                    stroke="#60a5fa" 
+                                    stroke-width="3" 
+                                    style="transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1); filter: drop-shadow(0 0 10px rgba(96,165,250,0.5));" />
+                            </svg>
+
+                            <!-- Labels around the radar -->
+                            <div class="radar-label label-top">Logic</div>
+                            <div class="radar-label label-top-right">Architecture</div>
+                            <div class="radar-label label-bottom-right">Deployment</div>
+                            <div class="radar-label label-bottom">Resilience</div>
+                            <div class="radar-label label-bottom-left">Deep Focus</div>
+                            <div class="radar-label label-top-left">Creativity</div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
 <!-- The Engineering Portfolio (What They Build) -->
         <div id="portfolio" class="container py-5 mt-5 reveal">
             <div class="row justify-content-center text-center mb-5">
@@ -646,63 +735,52 @@
         
         
 
-        <div id="faq" class="container py-5 mt-5 mb-4 reveal">
+        <!-- The AI Command-Line FAQ -->
+      <div id="faq" class="container py-5 mt-5 mb-5 reveal">
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center mb-5">
-                    <h2 class="section-title">Common Inquiries.</h2>
-                    <p class="text-muted fs-5">Everything you need to know about the SpaceCode mentorship program.</p>
+                    <span class="badge-elite bg-dark text-accent border-secondary shadow-sm mb-3">
+                        <i class="ph-bold ph-terminal-window me-1"></i> System Knowledge Base
+                    </span>
+                    <h2 class="display-5 fw-bold mb-3">Query the System.</h2>
+                    <p class="fs-5" style="color: #475569;">
+                        Standard FAQs are boring. Select a prompt below to interface directly with the SpaceCode Oracle.
+                    </p>
                 </div>
             </div>
 
             <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="faq-container shadow-float">
+                <div class="col-lg-9">
+                    <div class="ai-faq-terminal rounded-4 overflow-hidden border position-relative" style="background: #0f172a; border-color: rgba(56, 189, 248, 0.3) !important;">
                         
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span class="fw-bold text-dark fs-5">My child has zero coding experience. Is this too advanced?</span>
-                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
-                                    Not at all. Phase 01 is specifically engineered for absolute beginners. We do not expect them to know syntax; we only require curiosity. We start by building core logical reasoning before writing a single line of complex code.
-                                </p>
+                        <div class="px-4 py-3 d-flex align-items-center justify-content-between border-bottom" style="background: rgba(15, 23, 42, 0.95); border-color: rgba(255,255,255,0.1) !important;">
+                            <div class="d-flex align-items-center">
+                                <span class="status-dot-pulse bg-success shadow-none me-3"></span>
+                                <span class="font-monospace fw-bold" style="letter-spacing: 1px; color: #94a3b8; font-size: 0.85rem;">SPACECODE LAB</span>
+                            </div>
+                            <div class="fw-bold" style="color: #10b981; font-size: 0.85rem;">
+                                <i class="ph-fill ph-shield-check me-1"></i> Secure Connection
+                            </div>
+                        </div>
+                        
+                        <div class="position-relative p-4 p-md-5" style="min-height: 320px; background: linear-gradient(180deg, #020617 0%, #0f172a 100%);">
+                            <div class="terminal-scanlines"></div>
+
+                            <div id="faq-output-container" class="font-monospace position-relative z-index-2" style="font-size: 1.05rem; line-height: 1.8;">
+                                <div id="faq-text-area">
+                                    <span style="color: #cbd5e1;">> System ready. Waiting for parent input...</span>
+                                </div>
+                                <span class="faq-cursor"></span>
                             </div>
                         </div>
 
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span class="fw-bold text-dark fs-5">Do I need to purchase a high-end laptop for my child?</span>
-                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
-                                    No. The SpaceCode Lab is fully equipped with 8 dedicated, high-performance workstations optimized for development and local AI model testing. Your child only needs to bring themselves.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item">
-                            <button class="faq-question">
-                                <span class="fw-bold text-dark fs-5">How is this different from computer science at school?</span>
-                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
-                                    School curriculums are often years behind current industry standards, relying on memorization and obsolete frameworks. SpaceCode is directed by an active Full-Stack Engineer. We teach modern, production-ready tools (like Git, Node, and AI APIs) that actual tech companies use today.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="faq-item border-0">
-                            <button class="faq-question">
-                                <span class="fw-bold text-dark fs-5">Why restrict the lab to only 8 students?</span>
-                                <div class="faq-icon-wrapper"><i class="ph-bold ph-plus"></i></div>
-                            </button>
-                            <div class="faq-answer">
-                                <p class="text-muted mb-0 pt-2 pb-4" style="line-height: 1.7;">
-                                    Engineering cannot be taught in a crowded classroom. A strict 8-student limit allows for direct, 1-on-1 code reviews, personalized architecture planning, and a premium, distraction-free environment crucial for deep cognitive focus.
-                                </p>
+                        <div class="p-4 border-top" style="background: rgba(30, 41, 59, 0.8); border-color: rgba(255,255,255,0.05) !important;">
+                            <div class="font-monospace fw-bold mb-3" style="color: #94a3b8; font-size: 0.85rem;">> SELECT QUERY BELOW:</div>
+                            <div class="d-flex flex-wrap gap-2" id="faq-prompts">
+                                <button class="faq-chip" data-faq="0"><i class="ph-bold ph-code me-2"></i> Zero Experience?</button>
+                                <button class="faq-chip" data-faq="1"><i class="ph-bold ph-laptop me-2"></i> Laptop Required?</button>
+                                <button class="faq-chip" data-faq="2"><i class="ph-bold ph-buildings me-2"></i> vs. School IT?</button>
+                                <button class="faq-chip" data-faq="3"><i class="ph-bold ph-users me-2"></i> Why 8 Students?</button>
                             </div>
                         </div>
 

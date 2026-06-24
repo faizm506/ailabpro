@@ -1860,3 +1860,179 @@ html, body {
     font-family: monospace;
     z-index: 2; position: relative;
 }
+
+
+/* =========================================
+   COGNITIVE RADAR
+   ========================================= */
+
+.radar-bg-glow {
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; height: 80%;
+    background: radial-gradient(circle, rgba(37,99,235,0.15) 0%, transparent 70%);
+    z-index: 1;
+}
+
+/* Custom Cyber Slider */
+.cyber-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 6px;
+    background: #334155;
+    border-radius: 5px;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.cyber-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--accent-blue);
+    cursor: pointer;
+    border: 3px solid #0f172a;
+    box-shadow: 0 0 15px var(--accent-blue);
+    transition: transform 0.2s;
+}
+
+.cyber-slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+}
+
+.radar-feedback-box {
+    transition: all 0.4s ease;
+}
+
+/* Radar Labels */
+.radar-label {
+    position: absolute;
+    color: #94a3b8;
+    font-family: monospace;
+    font-size: 0.8rem;
+    font-weight: bold;
+    z-index: 3;
+    white-space: nowrap;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.label-top { top: 2%; left: 50%; transform: translateX(-50%); }
+.label-top-right { top: 25%; right: -5%; }
+.label-bottom-right { bottom: 25%; right: -5%; }
+.label-bottom { bottom: 2%; left: 50%; transform: translateX(-50%); }
+.label-bottom-left { bottom: 25%; left: -5%; }
+.label-top-left { top: 25%; left: -5%; }
+
+@media (max-width: 768px) {
+    .radar-label { font-size: 0.65rem; }
+    .label-top-right { right: -10%; }
+    .label-bottom-right { right: -10%; }
+    .label-bottom-left { left: -10%; }
+    .label-top-left { left: -10%; }
+}
+
+/* Premium Text Gradient for Headings */
+.tech-gradient-text {
+    background: linear-gradient(135deg, #0f172a 0%, #2563eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+}
+
+
+/* =========================================
+   AI COMMAND-LINE FAQ (High Contrast)
+   ========================================= */
+
+.ai-faq-terminal {
+    box-shadow: 0 30px 60px -15px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(56, 189, 248, 0.1);
+}
+
+/* Subtle CRT Monitor Scanlines */
+.terminal-scanlines {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.06), rgba(0, 255, 0, 0.02), rgba(0, 0, 255, 0.06));
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 1;
+}
+
+.faq-cursor {
+    display: inline-block;
+    width: 12px;
+    height: 1.3rem;
+    background-color: #38bdf8; /* Bright Cyan */
+    vertical-align: middle;
+    animation: blinkCursor 1s step-end infinite;
+    box-shadow: 0 0 10px #38bdf8;
+    margin-left: 6px;
+}
+
+/* Upgraded Interactive Chips */
+.faq-chip {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid #475569;
+    color: #e2e8f0; /* Crisp white-slate */
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    display: flex;
+    align-items: center;
+}
+
+.faq-chip i {
+    font-size: 1.2rem;
+    color: var(--accent-blue);
+    transition: color 0.2s ease;
+}
+
+.faq-chip:hover {
+    border-color: #38bdf8;
+    color: #38bdf8;
+    background: rgba(56, 189, 248, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(56, 189, 248, 0.15);
+}
+
+.faq-chip:hover i { color: #38bdf8; }
+
+/* Active State (Green) */
+.faq-chip.active {
+    border-color: #10b981;
+    color: #10b981;
+    background: rgba(16, 185, 129, 0.1);
+    box-shadow: 0 5px 15px rgba(16, 185, 129, 0.2);
+}
+
+.faq-chip.active i { color: #10b981; }
+
+/* High Visibility Text Classes */
+.faq-query-text { 
+    color: #38bdf8; /* Bright Cyan */
+    font-weight: 700; 
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.3);
+}
+
+.faq-answer-text { 
+    color: #f8fafc; /* Pure White */
+    font-family: 'Inter', sans-serif; /* Switch to normal font for easier reading of long answers */
+    font-size: 1.1rem;
+    letter-spacing: 0.2px;
+}
+
+@media (max-width: 768px) {
+    .faq-chip { font-size: 0.85rem; padding: 8px 14px; }
+    .faq-chip i { font-size: 1.1rem; }
+}
