@@ -199,33 +199,175 @@ body {
     background: #eff6ff; border: 1px solid #bfdbfe;
 }
 
-/* Hero Section & Terminal Graphic */
-.hero-container { padding-top: 160px; }
-.hero-title { font-size: clamp(3rem, 5vw, 4.5rem); font-weight: 800; line-height: 1.1; letter-spacing: -0.03em; color: var(--text-dark); }
-.hero-image-wrapper { position: relative; border-radius: 32px; padding: 12px; background: rgba(255,255,255,0.5); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.8); box-shadow: var(--shadow-float); }
-.hero-img { width: 100%; height: 500px; object-fit: cover; border-radius: 20px; }
+/* =========================================
+   PURE AESTHETIC HERO (PRO-LEVEL UI)
+   ========================================= */
 
-.floating-badge { position: absolute; bottom: 40px; left: -30px; background: var(--surface-white); padding: 1.5rem; border-radius: 16px; border: 1px solid var(--border-color); text-align: center; animation: floatObj 6s ease-in-out infinite; }
-.floating-terminal {
-    position: absolute; top: 40px; right: -40px; width: 280px;
-    background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(16px);
-    border: 1px solid rgba(255,255,255,0.1); border-radius: 16px;
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2); overflow: hidden;
-    animation: floatObj 8s ease-in-out infinite reverse;
+.hero-container {
+    padding-top: 180px; /* FIXED: Pushes content below the fixed navbar */
+    padding-bottom: 5rem;
+    position: relative;
 }
-@keyframes floatObj { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
 
-.terminal-header { background: rgba(0,0,0,0.5); padding: 8px 12px; display: flex; align-items: center; gap: 6px; }
-.dot { width: 10px; height: 10px; border-radius: 50%; }
-.terminal-title { color: #94a3b8; font-family: 'Orbitron', monospace; font-size: 0.7rem; margin-left: auto; letter-spacing: 1px; }
-.terminal-body { padding: 16px; font-family: monospace; font-size: 0.85rem; color: #f8fafc; }
-.typewriter-text { margin-bottom: 8px; overflow: hidden; white-space: nowrap; width: 0; animation: typing 1.5s steps(30, end) forwards; }
-.delay-1 { animation-delay: 1.5s; }
-.delay-2 { animation-delay: 3s; }
-.cursor-blink { animation: blink 1s step-end infinite; }
-@keyframes typing { to { width: 100%; } }
-@keyframes blink { 50% { opacity: 0; } }
+/* Ambient Background Meshes */
+.hero-ambient-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(100px);
+    opacity: 0.4;
+    z-index: 0;
+    pointer-events: none;
+}
 
+.glow-primary {
+    top: -10%;
+    left: -10%;
+    background: radial-gradient(circle, rgba(37,99,235,0.4) 0%, rgba(37,99,235,0) 70%);
+}
+
+.glow-secondary {
+    bottom: -20%;
+    right: -10%;
+    background: radial-gradient(circle, rgba(16,185,129,0.3) 0%, rgba(16,185,129,0) 70%);
+}
+
+/* Elite Minimalist Typography */
+.badge-pure {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #475569;
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 100px;
+    border: 1px solid #e2e8f0;
+}
+
+.hero-title-pure {
+    font-size: clamp(3rem, 5vw, 4.5rem);
+    letter-spacing: -2px;
+    line-height: 1.1;
+    color: #0f172a;
+}
+
+.text-gradient-pure {
+    background: linear-gradient(135deg, #2563eb 0%, #06b6d4 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-subtitle-pure {
+    line-height: 1.8;
+    color: #475569;
+}
+
+/* Ultra-Premium Button */
+.btn-pure-primary {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 100px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+}
+
+.btn-pure-primary:hover {
+    background: #2563eb;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(37, 99, 235, 0.3);
+}
+
+.btn-pure-link:hover {
+    color: #2563eb !important;
+}
+
+.btn-pure-link i {
+    transition: transform 0.2s ease;
+}
+
+.btn-pure-link:hover i {
+    transform: translateX(4px);
+    color: #2563eb !important;
+}
+
+/* Glassmorphic Visuals */
+.shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.glass-floating-card {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 10;
+}
+
+/* Smooth Floating Animations */
+.shadow-float {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    animation: floatSmooth 6s ease-in-out infinite;
+}
+
+.shadow-float-delayed {
+    box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    animation: floatSmooth 7s ease-in-out infinite 1s;
+}
+
+@keyframes floatSmooth {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Card Placements */
+.metric-card {
+    bottom: 40px;
+    left: -40px;
+}
+
+.icon-box-pure {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(37, 99, 235, 0.1);
+}
+
+.editor-card {
+    top: -20px;
+    right: -30px;
+    width: 320px;
+    background: rgba(15, 23, 42, 0.9);
+    border-color: rgba(255,255,255,0.1);
+}
+
+.mac-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 991px) {
+    .hero-container { padding-top: 140px; }
+    .hero-title-pure { font-size: 3rem; }
+    .hero-ambient-glow { width: 300px; height: 300px; }
+}
 /* Premium Infinite Tech Ticker */
 .ticker-container {
     width: 100%;
@@ -436,115 +578,12 @@ body {
 @keyframes spinLeft { 
     100% { transform: rotate(-360deg); } 
 }
-/* --- Pro Curriculum Modules --- */
-
-.pro-module-card {
-    background: var(--surface-white);
-    border-radius: 24px;
-    padding: 2.5rem;
-    position: relative;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.03);
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-}
-
-/* The subtle top gradient line for a premium touch */
-.card-gradient-edge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #dbeafe 0%, var(--accent-blue) 100%);
-    opacity: 0;
-    transition: opacity 0.4s ease;
-}
-
-.pro-module-card:hover {
-    transform: translateY(-8px);
-    border-color: #bfdbfe;
-    box-shadow: 0 20px 40px -10px rgba(37, 99, 235, 0.12);
-}
-
-.pro-module-card:hover .card-gradient-edge {
-    opacity: 1;
-}
-
-.module-phase {
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    color: var(--accent-blue);
-    background: #eff6ff;
-    padding: 6px 12px;
-    border-radius: 8px;
-    border: 1px solid #dbeafe;
-}
-
-.module-icon {
-    width: 48px;
-    height: 48px;
-    background: #f8fafc;
-    color: var(--text-dark);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-    border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-}
-
-.pro-module-card:hover .module-icon {
-    background: var(--accent-blue);
-    color: #fff;
-    border-color: var(--accent-blue);
-    transform: scale(1.05) rotate(-5deg);
-}
-
-.module-title {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: var(--text-dark);
-    margin-bottom: 1rem;
-    letter-spacing: -0.02em;
-}
-
-.module-desc {
-    color: var(--text-muted);
-    line-height: 1.6;
-    font-size: 0.95rem;
-    flex-grow: 1; /* Pushes the tech stack to the bottom uniformly */
-}
-
-.module-divider {
-    height: 1px;
-    width: 100%;
-    background: var(--border-color);
-    margin: 1.5rem 0;
-}
-
-.module-tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.tech-pill {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: #475569;
-    background: #f1f5f9;
-    padding: 6px 10px;
-    border-radius: 6px;
-    border: 1px solid #e2e8f0;
-}
 
 /* --- Ultra-Premium Architect Section --- */
+
+/* =========================================
+   ARCHITECT & CONSULTANT PROFILE (FIXED)
+   ========================================= */
 
 .architect-wrapper {
     background: var(--surface-white);
@@ -572,11 +611,16 @@ body {
     pointer-events: none;
 }
 
+/* MERGED & FIXED: Profile Ring */
 .profile-ring {
     position: relative;
-    padding: 6px;
+    padding: 6px; /* Keeps the nice gradient border effect */
     border-radius: 50%;
     background: linear-gradient(135deg, rgba(37,99,235,0.2) 0%, rgba(37,99,235,0.05) 100%);
+    display: inline-flex; /* Prevents width/height conflicts with the image */
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
 }
 
 .profile-img-advanced {
@@ -586,6 +630,8 @@ body {
     border-radius: 50%; 
     border: 4px solid #fff; 
     box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    position: relative;
+    z-index: 2;
 }
 
 /* Live Status Dot */
@@ -601,6 +647,7 @@ body {
     align-items: center;
     justify-content: center;
     z-index: 3;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 .pulse-dot {
@@ -620,8 +667,58 @@ body {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
 }
 
+/* FIXED: Added a 0% start state for smooth looping */
 @keyframes ping {
-    75%, 100% { transform: scale(2); opacity: 0; }
+    0% { transform: scale(1); opacity: 0.8; }
+    75%, 100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* =========================================
+   CONSULTING BENTO & RADAR
+   ========================================= */
+
+.consulting-bento-box {
+    transition: all 0.3s ease;
+}
+
+.consulting-bento-box:hover {
+    background: #ffffff !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 15px 30px -10px rgba(0,0,0,0.05);
+    transform: translateY(-3px);
+}
+
+/* FIXED: Consultant Radar Animation (No more layout thrashing) */
+.consultant-radar-ring {
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    width: 140px; /* Base size matches the image */
+    height: 140px;
+    margin-top: -70px; /* Perfect centering */
+    margin-left: -70px;
+    border-radius: 50%;
+    border: 1px solid rgba(56, 189, 248, 0.5);
+    animation: radarPulse 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.ring-1 { animation-delay: 0s; }
+.ring-2 { animation-delay: 1.5s; }
+
+/* FIXED: Uses transform scale instead of width/height for GPU acceleration */
+@keyframes radarPulse {
+    0% { 
+        transform: scale(1); 
+        opacity: 1; 
+        border-width: 2px; 
+    }
+    100% { 
+        transform: scale(1.8); /* Scales to approx 250px without glitching */
+        opacity: 0; 
+        border-width: 1px; 
+    }
 }
 /* --- Advanced Outcomes Pipeline --- */
 
@@ -2035,4 +2132,124 @@ html, body {
 @media (max-width: 768px) {
     .faq-chip { font-size: 0.85rem; padding: 8px 14px; }
     .faq-chip i { font-size: 1.1rem; }
+}
+
+
+/* =========================================
+   APPLE iOS 18+ LIQUID GLASS (PERFORMANCE OPTIMIZED)
+   ========================================= */
+
+/* The Optimized Animated Mesh Background */
+.apple-liquid-section {
+    background-color: #000000;
+    /* We use a pure CSS gradient mesh. 100x lighter on the GPU than blurred divs */
+    background-image: 
+        radial-gradient(at 0% 0%, rgba(55, 48, 163, 0.4) 0px, transparent 60%),
+        radial-gradient(at 100% 100%, rgba(14, 165, 233, 0.3) 0px, transparent 60%),
+        radial-gradient(at 50% 50%, rgba(30, 27, 75, 0.5) 0px, transparent 60%);
+    background-size: 150% 150%;
+    animation: optimizedMeshPan 15s ease-in-out infinite alternate;
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 2rem 0;
+}
+
+@keyframes optimizedMeshPan {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
+
+/* --- Apple's True Vibrancy Glass --- */
+.apple-glass-card {
+    background: rgba(30, 30, 32, 0.45); /* Deep slate base */
+    backdrop-filter: blur(40px) saturate(200%); /* The 'Saturate' makes it look like real Apple Glass */
+    -webkit-backdrop-filter: blur(40px) saturate(200%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-top: 1px solid rgba(255, 255, 255, 0.15); /* Top reflection edge */
+    border-radius: 28px; /* Apple uses softer curves */
+    padding: 2.5rem;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.apple-glass-card:hover {
+    transform: scale(1.02); /* Apple uses subtle scaling, not heavy floating */
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+    background: rgba(40, 40, 42, 0.55);
+}
+
+/* --- Typography & Details (iOS Style) --- */
+.module-header { margin-bottom: 2rem; }
+
+.module-phase { 
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", sans-serif;
+    color: #0ea5e9; 
+    font-weight: 600; 
+    font-size: 0.85rem;
+    letter-spacing: 1px; 
+    text-transform: uppercase;
+}
+
+.module-icon {
+    width: 44px; height: 44px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    color: #f5f5f7;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+}
+
+.apple-glass-card:hover .module-icon {
+    color: #0ea5e9;
+    background: rgba(14, 165, 233, 0.15);
+    border-color: rgba(14, 165, 233, 0.3);
+}
+
+.module-title { 
+    color: #f5f5f7; /* Apple's specific off-white */
+    font-weight: 700; 
+    font-size: 1.5rem; 
+    margin-bottom: 1rem; 
+    letter-spacing: -0.5px;
+}
+
+.module-desc { 
+    color: #a1a1a6; /* Apple's specific text-muted */
+    line-height: 1.6; 
+    font-size: 0.95rem; 
+    font-weight: 400;
+}
+
+.apple-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 1.5rem 0;
+}
+
+/* --- Tech Pills --- */
+.module-tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-pill {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    color: #d2d2d7;
+    padding: 6px 12px;
+    border-radius: 8px; /* Square with soft edges like iOS widgets */
+    font-size: 0.75rem;
+    font-weight: 500;
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", monospace;
+    transition: all 0.2s ease;
+}
+
+.apple-glass-card:hover .tech-pill {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
 }
